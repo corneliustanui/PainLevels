@@ -20,11 +20,22 @@ ui <- fluidPage(
                    primary = "#ff6b6b",
                    base_font = font_google("Nunito")),
   
+  # how emojis are displayed 
   tags$style(HTML("
-      .emoji-box {font-size: 2rem; line-height: 1.1; display: inline-block;
-                   margin: 2px; width: 2.2rem; text-align: center;}
-      .panel-title {font-weight: 600; font-size: 1.2rem;}
-  ")),
+  .emoji-box {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0;
+    line-height: 1;
+  }
+")),
   
   titlePanel("🩹 Pain Levels"),
   sidebarLayout(

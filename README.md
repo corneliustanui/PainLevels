@@ -1,4 +1,4 @@
-# PSI's *Shiny Apps For Schools*] Entry App
+# PSI Schools Outreach Program - Entry App
 
 This [small shiny app](https://corneliuskiplimo.shinyapps.io/PainLevels/) represents my submission for the entry as a volunteer developer for the PSI schools outreach program.
 
