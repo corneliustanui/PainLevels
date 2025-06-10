@@ -7,11 +7,18 @@
 # Date:        10 June 2025
 # Version:     1
 
+## load packages
+library(shiny)
+library(shinyWidgets)   # colourful inputs
+library(bslib)          # modern bootstrap themes
+library(sass)           # sass CSS preprocessor 
+library(htmltools)      # for HTML emoji in pictogram
+
 # define UI elements
 ui <- fluidPage(
-  theme = bslib::bs_theme(bootswatch = "morph",
-                          primary = "#ff6b6b",
-                          base_font = bslib::font_google("Nunito")),
+  theme = bs_theme(bootswatch = "morph",
+                   primary = "#ff6b6b",
+                   base_font = font_google("Nunito")),
   
   tags$style(HTML("
       .emoji-box {font-size: 2rem; line-height: 1.1; display: inline-block;
@@ -25,7 +32,7 @@ ui <- fluidPage(
       h4("View pateints pain level!"),
       
       # select sample size
-      shinyWidgets::sliderTextInput(
+      sliderTextInput(
         inputId = "n", 
         label = "Number of patients",
         choices = seq(10, 150, by = 10), 

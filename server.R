@@ -7,6 +7,13 @@
 # Date:        10 June 2025
 # Version:     1
 
+## load packages
+library(ggplot2)        # histogram
+library(purrr)          # functional programming tools - map2 etc
+
+# load globals
+source("./globals/funcs.R")
+
 # define server side processing
 server <- function(input, output, session) {
   
