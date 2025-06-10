@@ -42,14 +42,13 @@ server <- function(input, output, session) {
         .x
       ))
       
-      div(style = "
-      display: grid;
+      # display emojis in a flexible grid
+      div(style = "display: grid;
       grid-template-columns: repeat(auto-fill, minmax(2.2rem, 1fr));
       gap: 4px;
       max-width: 100%;
       margin-left: auto;
-      margin-right: auto;
-      ", tagList(boxes))
+      margin-right: auto;", tagList(boxes))
       
     }, error = function(e) {
       div(style = "color:red;", paste("UI render error:", e$message))
